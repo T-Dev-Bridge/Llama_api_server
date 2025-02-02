@@ -9,6 +9,10 @@ ollama Container 실행 ( GPU O, 없다면 --gpus all 옵션 제거 )
 
  Model 설치 확인 : `ollama ps`
 
+ollama UI 환경 세팅 (임시 local UI) : 
+```
+docker run -d -p 1144:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
 
  ### Python 서버 실행
 
